@@ -152,3 +152,33 @@ Main problem of creating a REST API is that we need to create a REST API for ano
 - RestController
 - Service
 - ServiceImpl
+
+## Development Process
+
+1. Add Spring Data Rest to POM file
+
+What you need for Spring data Rest
+
+- Entity: Employee
+- JpaRepository: EmployeeRepository extends JPARepository
+- Maven POM dependency for: spring-boot-starter-data-rest
+
+## Advanced Features
+
+- Pagination, sorting and searching
+- Extending and adding custom queries with JPQL
+- Query Domain Specific Language (Query DSL)
+
+## Configuration, Pagination and sorting
+
+- Specify plural name / path with an annotation
+    - @RepositoryRestResource(path="members) in repository interface
+
+- By default, Spring Data REST will return the first 20 elements
+    - Page size = 20
+
+| Name                               | Description                                  |
+|------------------------------------|----------------------------------------------|
+| spring.data.rest.base-path         | Base path used to expose repository resources |
+| spring.data.rest.default-page-size | Default size of pages                        |
+| spring.data.rest.max-page-size     | Maximum size of pages                        |
