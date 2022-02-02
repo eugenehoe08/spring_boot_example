@@ -128,3 +128,27 @@ Spring Boot Starters
 - Simply add dependency to the POM file
 - REST endpoints are automatically added to the application
 
+# Spring Data JPA
+
+Main problem of DAO is that we have to create many DAOs for different entities, resulting in redundant lines of code.
+
+## Development Process
+
+1. Extend JpaRepository Interface
+2. Use your repository in your app
+
+- No need for implementation methods for CRUD methods
+
+## Advanced Features
+
+- Extending and adding custom queries with JPQL
+- Query Domain Specific Language (Query DSL)
+- Defining custom methods (low-level coding)
+
+# Spring Data REST
+
+Main problem of creating a REST API is that we need to create a REST API for another entity
+
+- RestController
+- Service
+- ServiceImpl
