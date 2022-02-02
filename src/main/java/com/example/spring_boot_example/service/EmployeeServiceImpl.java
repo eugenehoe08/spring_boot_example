@@ -3,6 +3,7 @@ package com.example.spring_boot_example.service;
 import com.example.spring_boot_example.dao.EmployeeDAO;
 import com.example.spring_boot_example.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,8 +14,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     private EmployeeDAO employeeDAO;
 
+    // change qualifier to dao implementation of choice
     @Autowired
-    public EmployeeServiceImpl(EmployeeDAO employeeDAO) {
+    public EmployeeServiceImpl(@Qualifier("employeeDAOJpaImpl") EmployeeDAO employeeDAO) {
         this.employeeDAO = employeeDAO;
     }
 
